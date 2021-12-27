@@ -1,0 +1,526 @@
+/* ---------------------------------------------------
+    GENERAL STYLES (FROM GUILHERME)
+----------------------------------------------------- */
+body {
+    padding-top: 56px;
+}
+
+.bg-primary {
+    background-color: #FFA101 !important;
+}
+
+.bg-light {
+    background-color: #e9ecef !important;
+}
+
+.bg-color1 {
+    background-color: #fff8e5 !important;
+}
+
+.bg-color2 {
+    background-color: #FFA101 !important;
+}
+
+.bg-color3 {
+    background-color: #66df73 !important;
+}
+
+.bg-color4 {
+    background-color: #31525B !important;
+}
+
+.bg-color0 {
+    color: white !important;
+}
+
+svg {
+    cursor: pointer;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.2);
+    transition: 200ms ease-in-out;
+}
+
+.carousel-caption {
+    font-family: 'Dosis', sans-serif;
+    text-shadow: rgba(0, 0, 0, 0.747) 1px 1px 4px;
+}
+
+.carousel-caption h5 {
+    font-weight: 700;
+}
+
+/* ---------------------------------------------------
+    FONTS
+----------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
+
+
+/* ------------------------------------------------
+    USER HOME-PAGE
+--------------------------------------------------- */
+
+#filter_bar {
+    z-index: 1040;
+}
+
+.card-img-top {
+    filter: brightness(95%);
+    cursor: pointer;
+}
+
+.card-img-top:hover {
+    border-radius: 10%;
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.267) -1px 1px 4px 0px;
+    transition: 200ms ease-in-out;
+}
+
+#cart-modal {
+    background-color: #31525B !important;
+}
+
+#itemsCartNum {
+    color: black;
+}
+
+@media screen and (max-width: 575px) {
+    .col-xs {
+        width: 40%;
+    }
+
+    .col-xs-cart {
+        width: 20%;
+    }
+
+    .d-xs-none {
+        display: none;
+    }
+
+    .logo-xs {
+        width: 50% !important;
+    }
+}
+
+#toggler-icon {
+    color: chartreuse !important;
+    fill: rgb(243, 10, 10);
+}
+
+/* ------------------------------------------------
+    PRODUCT DETAILS PAGE
+--------------------------------------------------- */
+
+.change-qnt:hover {
+    transform: scale(1.2);
+    transition: 400ms ease-in-out;
+}
+
+#product_details {
+    user-select: none;
+}
+
+#product_details .img-thumbnail {
+    cursor: pointer;
+}
+
+#product_details .img-thumbnail:hover {
+    filter: brightness(85%);
+    transition: 400ms ease-in-out;
+}
+
+.badge-blue {
+    color: #fff;
+    background-color: #007bff;
+}
+
+.badge-green {
+    color: #fff;
+    background-color: greenyellow;
+}
+
+.badge-orange {
+    color: #fff;
+    background-color: orangered;
+}
+
+.badge-yellow {
+    color: #fff;
+    background-color: rgb(218, 214, 2);
+}
+
+/* ---------------------------------------------------
+    CART MODAL
+----------------------------------------------------- */
+
+.modal.right .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 320px;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+    -o-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+}
+
+.modal.right .modal-content {
+    height: 100%;
+    overflow: none;
+}
+
+#cart-content {
+    overflow: auto;
+}
+
+.modal.right.fade .modal-dialog {
+    right: 0px;
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+    transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+#remove-item {
+    cursor: pointer;
+    color: crimson;
+}
+
+#remove-item:hover {
+    transform: scale(1.5);
+    color: rgb(238, 42, 81);
+    transition: 400ms;
+}
+
+/* ---------------------------------------------------
+    SUMMARY PAGE - CHECKOUT
+----------------------------------------------------- */
+
+#summary_products {
+    overflow: auto;
+}
+
+/* ---------------------------------------------------
+    LOGIN MODAL STYLE
+----------------------------------------------------- */
+.main-content {
+    width: 50%;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .4);
+    margin: 5rem auto;
+    display: flex;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.login-cont {
+    min-height: calc(100vh - 56px - 7rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.company__info {
+    background-color: #ee675d;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.company__info h4 {
+    font-size: 1rem;
+    color: black;
+}
+
+.logo_form {
+    width: 60%;
+    height: auto;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #ee675d !important;
+    border: 0;
+
+}
+
+@media screen and (max-width: 640px) {
+    .main-content {
+        width: 80%;
+    }
+
+    .company__info {
+        display: none;
+    }
+
+    .login_form {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+
+    }
+
+    .login-btn {
+        width: 70% ! important;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width:767px) {
+    .main-content {
+        width: 70%;
+    }
+
+    .logo_form {
+        width: 20vw;
+        height: auto;
+        padding: 1vw;
+        background-image: (src="../img/logo fruits & veggie MD.png");
+    }
+
+    .company__info {
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .company__info .company_title {
+        margin: 0.5rem auto;
+    }
+
+    .login_form {
+        border-top-right-radius: 0px ! important;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+}
+
+.login_form {
+    background-color: #fff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.login_form h2 {
+    font-size: 1.5rem;
+}
+
+form {
+    padding: 0 1rem;
+    width: 100%;
+    margin: 0 2rem;
+}
+
+.form__input {
+    width: 100%;
+    border: 0px solid transparent;
+    border-radius: 0;
+    border-bottom: 1px solid #aaa;
+    padding: 0.5rem .5rem .5rem;
+    outline: none;
+    margin: 1.5rem auto 0rem;
+    transition: all .5s ease;
+}
+
+.form__input:focus {
+    border-bottom-color: #008080;
+    box-shadow: 0 0 5px rgba(0, 80, 80, .4);
+    border-radius: 4px;
+}
+
+.login-btn {
+    transition: all .5s ease;
+    width: 70%;
+    border-radius: 30px;
+    color: #ee675d;
+    font-weight: 600;
+    background-color: #fff;
+    border: 1px solid #ee675d;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.login-btn:hover,
+.login-btn:focus {
+    background-color: #ee675d;
+    color: #fff;
+}
+
+select.form-control:valid {
+    background-position: right calc(.75em + .375em + .1875rem) center;
+}
+
+select.form-control:invalid {
+    background-position: right calc(.75em + .375em + .1875rem) center;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+.wrapper {
+    display: none;
+    width: 100%;
+    align-items: stretch;
+}
+
+.sidebar-header {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.bi-emoji-smile-upside-down {
+    margin-top: 0.5rem;
+    font-size: 3rem;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #ee675d;
+    color: #fff;
+    transition: all 0.3s;
+    min-height: calc(100vh - 56px - 7rem);
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    margin-bottom: 0;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: #fff;
+}
+
+#sidebar ul li a:hover {
+    color: #ee675d;
+    background: #fff;
+    text-decoration: none;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #ee675d;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #d05148;
+}
+
+#content {
+    width: calc(100%);
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+#content.active {
+    width: calc(100% - 250px);
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+#sidebarCollapse {
+    margin-right: 20px;
+}
+
+/* ---------------------------------------------------
+    MAIN PAGE STYLE
+----------------------------------------------------- */
+table i:hover {
+    cursor: pointer;
+}
+
+#invalid-cat {
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
+
+/* ---------------------------------------------------
+    LOGO NAV
+----------------------------------------------------- */
+.logo {
+    width: 20%;
+    height: auto;
+}
+
+.navbar-toggler {
+    border: none !important;
+    outline: none !important;
+}
+
+/* ---------------------------------------------------
+    Footer
+----------------------------------------------------- */
+nav,
+footer {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.table thead th {
+    vertical-align: bottom !important;
+    border-bottom: 2px solid #5e5e5e !important;
+}
+
+.table td,
+.table th {
+    padding: .75rem;
+    vertical-align: top !important;
+    border-top: 1px solid #d4d4d4 !important;
+}
+
+.admin-create-container .btn-primary {
+    transition: all .5s ease !important;
+    width: 70% !important;
+    border-radius: 5px !important;
+    font-weight: 600 !important;
+    background-color: #ee675d !important;
+    color: #fff !important;
+    border: 1px solid #ee675d !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.admin-create-container .btn-primary:hover,
+.admin-create-container .btn-primary:focus {
+    background-color: #fff !important;
+    color: #ee675d !important;
+}

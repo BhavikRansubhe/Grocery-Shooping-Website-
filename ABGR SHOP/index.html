@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="image" property="og:image" content="https://iili.io/3cVSEB.md.png" />
+    <title>Fruits & Veggies</title>
+    <link rel="icon" type="image/png" href="./src/img/favicon.png"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="src/css/style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;800&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c5a42aa6b7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <img class="logo-xs logo" src="src/img/logo1.png" alt="Fruits & Veggies">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span>
+                    <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin/index.html">Admin</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+
+    <!-- Carousel -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="carouselExampleCaptions" class="carousel slide my-4" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="src/img/slider1.jpg" class="d-block w-100">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Organic Products Delivered To Your Door</h5>
+                                <p>Farm products like unique hand-crafted jams, pasture-raised eggs, dairy, artisan olive oil, and more....</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="src/img/slider2.jpg" class="d-block w-100">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Check out our newest fruits recipes</h5>
+                                <p>Don't miss out our 8 new healthy freshest recipes!</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="src/img/slider3.jpg" class="d-block w-100">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Freshness is key</h5>
+                                <p>We receive deliveries into our warehouse every night of the week direct from our farms!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>  <!-- Carousel -->
+
+    <!-- Filter bar -->
+    <div class="row mx-0 bg-color3 mb-4 py-2 align-items-center sticky-top" id="filter_bar">
+        <div class="d-xs-none d-sm-none d-md-block col"></div>
+        <div class="d-none d-md-block col-md-1 col-lg-1">
+            <div class="badge badge-secondary">Filters</div>
+        </div>
+        <div class="col-xs col-sm-9 col-md-3 col-lg-3">
+            <div class="input-group">
+                <input type="text" class="form-control" aria-label="Text input" id="searchInput">
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-outline-secondary">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-xs-none col-sm-3 col-md-1 col-lg-1"></div>
+        <div class="col-xs col-sm-9 col-md-3 col-lg-3">
+            <div class="input-group">
+                <div class="d-xs-none input-group-prepend">
+                    <label class="input-group-text" for="categoryFilter">Categories</label>
+                </div>
+                <select class="custom-select" id="categoryFilter">
+                    <option value="all" selected>All categories</option>
+                    <option value="Fruits">Fruits</option>
+                    <option value="Juices">Juices</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Organics">Organics</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-cart col-sm-3 col-md-2 col-lg-1">
+            <button type="button" class="btn btn-demo btn-info bg-color4" data-toggle="modal" data-target="#cartModal" id="cart-modal">
+            <svg class="bi bi-cart3" width="2.2em" height="2.2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+            </svg>
+            <span class="badge badge-dark d-none bg-color3" id="itemsCartNum">0</span>
+        </button>
+        </div>
+        <div class="col"></div>
+    </div> <!-- Filter bar -->
+
+    <!-- Products list -->
+    <div class="container-fluid">
+        <div class="row mx-0">
+            <div class="col"></div>
+            <div class="col-9 row" id="products_list">
+                <!-- Products list printed dynamically -->
+            </div>
+            <div class="col"></div>
+        </div>
+    </div> <!-- Products list -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-primary" id="footer">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright © ABGR SHOP 2021</p>
+        </div>
+    </footer> <!-- Footer -->
+
+    <!-- Modals Section -->
+
+    <!-- Product Details Modal -->
+    <div class="modal fade" id="product_details" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header" id="product_details_header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="" class="img-fluid" id="detailsMainImg">
+                        </div>
+                        <div class="col">
+                            <p class="font-weight-normal h2" id="details_title"></p>
+                            <p class="font-weight-lighter" id="details_description"></p>
+                            <p class="font-weight-bold display-4" id="details_price"></p>
+                            <div class="mb-4">
+                                <svg class="bi bi-caret-left-fill change-qnt" id="restProduct" width="2em" height="2em"
+                                    viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.86 8.753l5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                                </svg>
+                                <span class="h5" id="productQnt">1</span><span class="h5"> pc</span>
+                                <svg class="bi bi-caret-right-fill change-qnt" id="addProduct" width="2em" height="2em"
+                                    viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                </svg>
+                            </div>
+                            <button type="button" class="btn btn-primary" id="addCartBtn">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="row mt-sm-4 mt-md-4 mt-lg-0">
+                        <div class="col-sm-3 col-lg-1"></div>
+                        <div class="col-sm-2 col-md-2 col-lg-1">
+                            <img src="" id="thumb1" class="img-thumbnail">
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-1">
+                            <img src="" id="thumb2" class="img-thumbnail">
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-1">
+                            <img src="" id="thumb3" class="img-thumbnail">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div> <!-- Product Details Modal -->
+
+    <!-- Registration Modal -->
+    <div class="modal fade" id="registration_modal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Order Summary - Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row" id="registration_page">
+                        <form id="register-validation" class="needs-validation" novalidate>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inutName">Name</label>
+                                    <input type="text" class="form-control" id="inputName" placeholder="Name" required>
+                                    <div class="valid-feedback">Looks good!</div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputSurname">Surname</label>
+                                    <input type="text" class="form-control" id="inputSurname" placeholder="Surname" required>
+                                    <div class="valid-feedback">Looks good!</div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+                                    <div class="invalid-feedback">Please insert a valid email.</div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPhone">Phone Number</label>
+                                    <input type="tel" class="form-control" id="inputPhone" placeholder="000-00-00-00" required>
+                                    <div class="invalid-feedback">Please insert a valid phone.</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAddress">Address</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAddress2">Country</label>
+                                <input type="text" class="form-control" id="inputAddress2" placeholder="" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputCity">City</label>
+                                    <input type="text" class="form-control" id="inputCity" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">State</label>
+                                    <input type="text" id="inputState" class="form-control" required>
+                                </input>
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="inputZip">Zip</label>
+                                    <input type="text" class="form-control" id="inputZip" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary d-none" id="submitRegistrationHidden">Sign in</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="submitRegistration">Sign in</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div> <!-- Registration Modal -->
+
+    <!-- Thank you for your order modal -->
+    <div class="modal fade" id="summary_finish" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="staticBackdropLabel">Thank you for your order!</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row px-4 align-items-center" id="summary_page">
+                        <div class="col-lg-7 border rounded">
+                            <h4 class="my-3">Your Order <i class="fas fa-shopping-bag"></i></h4>
+                            <div class="row" id="summary_products">
+                                <!-- Purchased products printed dynamically -->
+                            </div>
+                        </div>
+                        <div class="col ml-lg-4 mt-3 mt-lg-0 border py-4 rounded">
+                            <h4>Payment Details <i class="far fa-credit-card"></i></h4>
+                            <hr>
+                            <h6>Subtotal:<span id="summary_subtotal" class="float-right"></span></h6>
+                            <h6>Shipping Price:<span id="summary_shipping" class="float-right">0.00Rs</span></h6>
+                            <hr>
+                            <h6>Total:<span id="summary_total" class="float-right"></span></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div> <!-- Thank you for your order modal -->
+
+    <!-- Modal Cart-Open  -->
+    <div class="modal right fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel2">
+                        Cart
+                        <svg class="bi bi-cart4" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="#FCB831" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                        </svg>
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <div class="modal-body" id="cart-content">
+                <!-- Cart content -->
+            </div>
+        <div class="row">
+            <div class="col-7 mx-3">
+                <span class="font-weight-bold">Shipping</span>
+            </div>
+            <div class="col-3">
+                <span id="cart-shipping" class="font-weight-bold float-right">0.00Rs</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7 mx-3">
+                <span class="font-weight-bold">Estimated total</span>
+            </div>
+            <div class="col-3">
+                <span id="cart-total" class="font-weight-bold float-right">0.00RS</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-11 m-3">
+                <button id="checkoutBtn" type="button" class="btn btn-success btn-lg btn-block" data-placement="top" data-toggle="popover" title="Ooooops!!!" data-content="Your cart is empty. Let's buy something!">Checkout</button>
+            </div>
+        </div>
+    </div>  <!-- Modal Cart-Open  -->
+
+    <script src="src/js/jsonSeeder.js"></script>
+    <script src="src/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
